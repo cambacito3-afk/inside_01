@@ -1086,7 +1086,7 @@ footer {
   nav {
     padding: 10px 12px;
     border-radius: 999px;
-    background:transparent;
+    background: rgba(10, 10, 10, 0.08);
     backdrop-filter: blur(8px);
   }
 
