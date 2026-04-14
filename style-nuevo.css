@@ -2036,63 +2036,53 @@ footer {
   .included-grid {
     grid-template-columns: 1fr;
   }
-
-  /* ── MOBILE HERO FIX ── */
-  @media (max-width: 640px) {
-
-    /* 1. Quita el fondo negro de la página — hero fluye sobre blanco */
-    .page-home {
-      background: #ffffff;
-    }
-
-    /* 2. El hero no necesita padding extra ni overflow visible */
-    .hero {
-      padding: 0;
-      overflow: hidden;
-      background: transparent;
-    }
-
-    /* 3. Elimina el fondo negro invisible debajo del muro */
-    .hero::before {
-      display: none;
-    }
-
-    /* 4. Hero-inner: lo ponemos debajo del muro, sin overlap negativo */
-    .hero-inner {
-      position: relative;
-      margin: 0 auto;
-      padding: 14px 16px 0;
-      background: #ffffff;
-    }
-
-    /* 5. El texto del hero ahora va sobre fondo blanco — ajusta colores */
-    .hero-eyebrow {
-      color: var(--accent);
-      text-shadow: none;
-    }
-
-    .hero-title,
-    .hero h1 {
-      color: #111111;
-      text-shadow: none;
-      max-width: 100%;
-      font-size: clamp(1.65rem, 7.5vw, 2.2rem);
-    }
-
-    .hero-title em {
-      color: var(--accent);
-    }
-
-    .hero-sub {
-      color: #3f6f8f;
-      text-shadow: none;
-    }
-
-    /* 6. Strip pegado al hero sin hueco */
-    .gold-strip {
-      margin-top: 0;
-    }
+  @media (max-width: 768px) {
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
-
-
 }
+
+@media (max-width: 640px) {
+  .page-home {
+    background: #ffffff;
+  }
+  .hero {
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+  }
+  .hero::before {
+    display: none;
+  }
+  .hero-inner {
+    position: relative;
+    margin: 0 auto;
+    padding: 14px 16px 0;
+    background: #ffffff;
+  }
+  .hero-eyebrow {
+    color: var(--accent);
+    text-shadow: none;
+  }
+  .hero-title,
+  .hero h1 {
+    color: #111111;
+    text-shadow: none;
+    max-width: 100%;
+    font-size: clamp(1.65rem, 7.5vw, 2.2rem);
+  }
+  .hero-title em {
+    color: var(--accent);
+  }
+  .hero-sub {
+    color: #3f6f8f;
+    text-shadow: none;
+  }
+  .gold-strip {
+    margin-top: 0;
+  }
+}
+
+  
